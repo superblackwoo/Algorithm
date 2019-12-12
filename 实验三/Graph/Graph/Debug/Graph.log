@@ -1,0 +1,4 @@
+﻿  Graph.cpp
+G:\a大三上\算法分析与设计\算法实验\实验三\Graph\Graph\Graph.cpp(59,21): warning C4018: “<”: 有符号/无符号不匹配
+G:\a大三上\算法分析与设计\算法实验\实验三\Graph\Graph\Graph.cpp(66,21): warning C4018: “<”: 有符号/无符号不匹配
+  Graph.vcxproj -> G:\a大三上\算法分析与设计\算法实验\实验三\Graph\Debug\Graph.exe

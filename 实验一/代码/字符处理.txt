@@ -1,0 +1,45 @@
+#include "stdafx.h"
+#include<stdio.h>
+#include<string>
+
+#define MAX_LINE 1024
+FILE read()
+{
+	int anumber, number[] = {0}, i = 0;
+	FILE *fp;
+	char buf[MAX_LINE], seps[] = " ,";
+	char *temp;
+	if((fp = fopen("G:\\a大三上\\算法分析与设计\\算法实验\\实验一\\input1-data.txt","r")) == NULL){
+		printf("Open file failed\n");
+	}
+	fgets(buf, MAX_LINE, fp);
+	printf("%s\n", buf);
+	temp = strtok(buf, seps);
+	printf("temp:::::::%s\n", buf);
+	//number[i] = (int)temp;
+	while (temp ) {
+		number[i] = temp[0] -'0' +21;
+		temp = strtok(NULL, seps);
+		i++;
+		printf("d ");
+	}
+	for (i = 0; i < MAX_LINE; i++)
+		printf("*%d ", number[i]);
+	/*while (fgets(buf, MAX_LINE, fp) != NULL)
+	{
+		printf("%s\n",buf);
+	}*/
+	//while()
+	if (fclose(fp) != 0)
+		printf("file can't close\n");
+	return *fp;
+}
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	//FILE* fp;
+	//*fp = read();
+	read();
+	return 0;
+}
+

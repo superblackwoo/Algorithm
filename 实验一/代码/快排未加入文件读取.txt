@@ -1,0 +1,76 @@
+#include "stdafx.h"
+#include<stdio.h>
+#include<string>
+
+#define MAX_LINE 1024
+FILE read()
+{
+	int  number[MAX_LINE] = {0}, i = 0;
+	FILE *fp;
+	//char buf[MAX_LINE], seps[] = " ,";
+	//char *temp;
+	if((fp = fopen("G:\\a大三上\\算法分析与设计\\算法实验\\实验一\\input1-data.txt","r")) == NULL){
+		printf("Open file failed\n");
+	}
+	while (fscanf(fp, "%d", &number[i])!=EOF) {
+		printf("temp:::::::%d\n", number[i]);
+		i++;
+	}
+	
+	//number[i] = (int)temp;
+	
+	for (i = 0; i < MAX_LINE; i++)
+		printf("*%d ", number[i]);
+	/*while (fgets(buf, MAX_LINE, fp) != NULL)
+	{
+		printf("%s\n",buf);
+	}*/
+	//while()
+	if (fclose(fp) != 0)
+		printf("file can't close\n");
+	return *fp;
+}
+
+int partition(int number[8], int low, int high) {
+	number[0] = number[low];
+	int pkey = number[0];
+	while (low < high) {
+		while (low < high && number[high] >= pkey) high--;
+		number[low] = number[high];
+		while (low < high && number[low] <= pkey) low++;
+		number[high] = number[low];
+	}
+	number[low] = number[0];
+	printf("partition done \n");
+	return low;  //返回位置
+}
+void qsort(int number[8], int low, int high) { //递归进行排序
+	if (low < high) {
+		int pkey = partition(number, low, high);
+		for (int i = 0; i < 8; i++) {
+			printf("d ");
+			printf("%d \n", number[i]);
+		}
+		qsort(number, low, pkey - 1);
+		qsort(number, pkey + 1, high);
+	}
+	printf("qsort done \n");
+}
+
+void QuickSort(int number[8], int high) {
+	qsort(number, 1, high);
+}
+int main(int argc, _TCHAR* argv[])
+{
+	int number[8] = {0, 23, 34, 15, 19, 56, 57, 9 }, i ;
+	//FILE* fp;
+	//*fp = read();
+	//read();
+	QuickSort(number, 7);
+	
+	for (i = 0; i < 8; i++) {
+		printf("d ");
+		printf("%d \n", number[i]);
+	}
+	return 0;
+}

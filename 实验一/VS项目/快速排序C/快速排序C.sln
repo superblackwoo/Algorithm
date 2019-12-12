@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "快速排序C", "快速排序C\快速排序C.vcxproj", "{EBD8807A-FA5E-4D1E-B27C-DB4405CA7C13}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EBD8807A-FA5E-4D1E-B27C-DB4405CA7C13}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EBD8807A-FA5E-4D1E-B27C-DB4405CA7C13}.Debug|Win32.Build.0 = Debug|Win32
+		{EBD8807A-FA5E-4D1E-B27C-DB4405CA7C13}.Release|Win32.ActiveCfg = Release|Win32
+		{EBD8807A-FA5E-4D1E-B27C-DB4405CA7C13}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
